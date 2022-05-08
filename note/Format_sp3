@@ -1,0 +1,39 @@
+# SIMPLE FORMAT DESCRIPTION
+# 
+# ANOTHER
+# ---------------------------
+#
+# line 1~2
+# file type | first epoch time | time interval | epoch number
+#
+# line 3~7
+# satellite-number int line 3 | PRN number of every satellite
+#
+# line 8~12
+# precision of every satellite
+#
+# line 13~14
+# ****
+#
+# line 15~16
+# used to calculate std with std-x/y/z and std-c in line after line 24
+#
+# line 17~18
+# ****
+#
+# line 19~22
+# comment
+#
+# ---------------------------
+# data record
+# ---------------------------
+# line 23
+# epoch time : year month day hour minute second
+#
+# line 24
+# position/velocity of satellite: P/V | PRN | X | Y | Z | clock | std-x | std-y | std-z | std-c
+# same with line 24 until line 24+satellite-number in line 3
+# then start next epoch record
+#
+# line 22+(satellite-number+1)*epoch-number+1
+# EOF
